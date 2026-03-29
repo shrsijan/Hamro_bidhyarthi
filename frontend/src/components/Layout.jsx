@@ -7,6 +7,7 @@ import {
   LogOut,
   Shield,
   ArrowLeftRight,
+  Users,
 } from "lucide-react";
 
 const NAV = {
@@ -14,11 +15,13 @@ const NAV = {
     { to: "/checkin", label: "Check In", icon: ClipboardCheck },
     { to: "/observe", label: "Observation", icon: Eye },
     { to: "/dashboard", label: "My Class", icon: LayoutDashboard },
+    { to: "/buddy-tasks", label: "Buddy Tasks", icon: Users },
   ],
   counselor: [
     { to: "/checkin", label: "Check In", icon: ClipboardCheck },
     { to: "/observe", label: "Observation", icon: Eye },
     { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { to: "/buddy-tasks", label: "Buddy Tasks", icon: Users },
   ],
   admin: [
     { to: "/admin", label: "Admin Panel", icon: Shield },

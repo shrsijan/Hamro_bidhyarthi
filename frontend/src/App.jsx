@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import StudentProfile from "./pages/StudentProfile";
 import Observe from "./pages/Observe";
 import AdminPanel from "./pages/AdminPanel";
+import BuddyTasks from "./pages/BuddyTasks";
 
 function ProtectedObserve() {
   return (
@@ -81,6 +82,7 @@ function AppRoutes() {
           <Route path="/observe" element={<ProtectedObserve />} />
           <Route path="/dashboard" element={<ProtectedDashboard />} />
           <Route path="/students/:id" element={<ProtectedStudentProfile />} />
+          <Route path="/buddy-tasks" element={<BuddyTasks />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="*" element={<Navigate to={homeRoute} replace />} />
         </Route>

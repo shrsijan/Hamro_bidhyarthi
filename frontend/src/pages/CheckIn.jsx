@@ -79,7 +79,7 @@ export default function CheckIn() {
     <div className="max-w-lg mx-auto">
       <div className="mb-6">
         <h1 className="text-xl font-semibold text-gray-900">Student Check-in</h1>
-        <p className="text-sm text-gray-400 mt-0.5">Record a student's mood, energy, and notes</p>
+        <p className="text-sm text-gray-400 mt-0.5">Record your mood, energy, and issues</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -153,7 +153,7 @@ export default function CheckIn() {
             value={note}
             onChange={(e) => setNote(e.target.value)}
             rows={3}
-            placeholder="Any observations or student comments..."
+            placeholder="Student comments"
             className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-400 resize-none"
           />
         </div>

@@ -135,7 +135,7 @@ export default function Observe() {
             value={note}
             onChange={(e) => setNote(e.target.value)}
             rows={3}
-            placeholder="Any context that might help..."
+            placeholder="Your observation"
             className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-400 resize-none"
           />
         </div>
