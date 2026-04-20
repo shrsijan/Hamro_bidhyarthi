@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import Layout from "./components/Layout";
 import OtpGate from "./components/OtpGate";
+import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CheckIn from "./pages/CheckIn";
@@ -38,7 +39,7 @@ function ProtectedStudentProfile() {
 
 function AppRoutes() {
   const { user, loading, logout } = useAuth();
-  const [authView, setAuthView] = useState("login");
+  const [authView, setAuthView] = useState("landing");
 
   if (loading) {
     return (
@@ -52,7 +53,14 @@ function AppRoutes() {
     if (authView === "register") {
       return <Register onSwitch={() => setAuthView("login")} />;
     }
-    return <Login onSwitch={() => setAuthView("register")} />;
+    if (authView === "login") {
+      return <Login onSwitch={() => setAuthView("register")} />;
+    }
+    return (
+      <LandingPage
+        onLogin={() => setAuthView("login")}
+      />
+    );
   }
 
   const role = user.role;
@@ -60,7 +68,7 @@ function AppRoutes() {
 
   function handleSwitchAccount() {
     logout();
-    setAuthView("login");
+    setAuthView("landing");
   }
 
   return (
